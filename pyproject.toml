@@ -98,10 +98,13 @@ hash = "3e5bbb6b394202f6"
 [tool.uv]
 constraint-dependencies = ["torch==2.9.1+cu128", "torchvision==0.24.1+cu128", "torchaudio==2.9.1+cu128"]
 
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
 [tool.uv.sources.comfygit-core]
 path = "/home/akatzfey/projects/comfyhub/comfygit/packages/core"
 editable = true
-
 
 [tool.uv.sources.torch]
 index = "pytorch-cu128"
@@ -111,10 +114,6 @@ index = "pytorch-cu128"
 
 [tool.uv.sources.torchaudio]
 index = "pytorch-cu128"
-[[tool.uv.index]]
-name = "pytorch-cu128"
-url = "https://download.pytorch.org/whl/cu128"
-explicit = true
 [dependency-groups]
 comfyui-depthanythingv2-16ef6428 = [
     "accelerate",
@@ -130,4 +129,4 @@ comfyui-videohelpersuite-ffcc3e88 = [
     "imageio-ffmpeg",
     "opencv-python",
 ]
-system-nodes = ["watchdog>=6.0.0", "zeroconf>=0.131.0", "comfygit-core>=0.3.5"]
+system-nodes = ["zeroconf>=0.131.0", "comfygit-core>=0.3.5", "watchdog>=6.0.0"]
